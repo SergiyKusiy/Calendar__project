@@ -27,4 +27,5 @@ BEM methodology
 React
 Hooks
 Author
-Datsiuk Vladimir
+Kysii Serhii
+
