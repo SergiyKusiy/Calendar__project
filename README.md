@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 # ___Calendar Project with React___
 ---
 [Site link](http://127.0.0.1:5500/src/index.html)
 ---
+=======
+# Calendar__project
+Available Scripts
+In the project directory, you can run:
+>>>>>>> b9ca0aa4c57e0dbd25e062be0a7b88d7e698c431
 
 ### Available Scripts
 ---
@@ -25,6 +31,7 @@ Your app is ready to be deployed!
 See the section about deployment for more information.
 
 The tech stack is:
+<<<<<<< HEAD
 ---
 + HTML5
 + CSS3
@@ -36,3 +43,15 @@ The tech stack is:
 ---
 #### __Author__
 + Kysii Serhii
+=======
+HTML5
+CSS3
+Flexbox
+Sass (Scss)
+BEM methodology
+React
+Hooks
+Author
+Kysii Serhii
+
+>>>>>>> b9ca0aa4c57e0dbd25e062be0a7b88d7e698c431
