@@ -36,11 +36,6 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: './src/index.html',
       }),
-      new CopyPlugin({
-        patterns: [
-          { from: '_redirects', to: '' },
-        ],
-      }),
     ],
     devServer: {
       historyApiFallback: true,
