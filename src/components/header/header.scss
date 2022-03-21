@@ -3,13 +3,21 @@
   height: 60px;
   padding: 0 48px;
   align-items: center;
+  background-color: rgb(164, 223, 250);
 }
 
 .create-event-btn {
   padding: 0 16px;
+  color: #fff;
+  background-color: rgb(12, 136, 238);
+  border: none;
 
   &__icon {
     margin-right: 8px;
+  }
+  &:hover {
+    color: rgb(2, 188, 245);
+    background-color: rgb(241, 243, 243);
   }
 }
 
@@ -17,14 +25,24 @@
   &__today-btn {
     margin-left: 32px;
     padding: 0 16px;
+    color: #fff;
+    background-color: rgb(12, 136, 238);
+    &:hover {
+      color: rgb(2, 188, 245);
+      background-color: rgb(241, 243, 243);
+    }
   }
 
   &__nav-icon {
     font-size: 16px;
-    margin-left: 20px;
+    margin-left: 32px;
+    color: rgb(12, 136, 238);
   }
 
   &__displayed-month {
-    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 52px;
+    color: rgb(12, 136, 238);
   }
 }

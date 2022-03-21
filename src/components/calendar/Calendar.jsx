@@ -1,32 +1,56 @@
-import React, { Component } from 'react';
-
-import Navigation from './../navigation/Navigation';
+import React, { Component, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import Navigation from '../navigation/Navigation';
 import Week from '../week/Week';
 import Sidebar from '../sidebar/Sidebar';
-import events from '../../gateway/events';
+import Modal from '../modal/Modal';
 
 import './calendar.scss';
 
-class Calendar extends Component {
-  state = {
-    events,
-  };
-
-  render() {
-    const { weekDates } = this.props;
-
-    return (
-      <section className="calendar">
-        <Navigation weekDates={weekDates} />
-        <div className="calendar__body">
-          <div className="calendar__week-container">
-            <Sidebar />
-            <Week weekDates={weekDates} events={this.state.events} />
-          </div>
+const Calendar = ({
+  weekDates,
+  events,
+  isShowModal,
+  dateInfoForDefault,
+  onHideModal,
+  onSubmitModal,
+  onDeleteEvent,
+  onCreateEvent,
+}) => {
+  return (
+    <section className="calendar">
+      {isShowModal && (
+        <Modal
+          onHideModal={onHideModal}
+          onSubmitModal={onSubmitModal}
+          dateInfoForDefault={dateInfoForDefault}
+        />
+      )}
+      <Navigation weekDates={weekDates} />
+      <div className="calendar__body">
+        <div className="calendar__week-container">
+          <Sidebar />
+          <Week
+            weekDates={weekDates}
+            events={events}
+            onDeleteEvent={onDeleteEvent}
+            onCreateEvent={onCreateEvent}
+          />
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
+
+Calendar.propTypes = {
+  weekDates: PropTypes.array.isRequired,
+  events: PropTypes.array.isRequired,
+  isShowModal: PropTypes.bool.isRequired,
+  dateInfoForDefault: PropTypes.array.isRequired,
+  onHideModal: PropTypes.func.isRequired,
+  onSubmitModal: PropTypes.func.isRequired,
+  onDeleteEvent: PropTypes.func.isRequired,
+  onCreateEvent: PropTypes.func.isRequired,
+};
 
 export default Calendar;

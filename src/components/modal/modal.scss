@@ -5,7 +5,7 @@
   align-items: center;
 
   &__content {
-    background: #fff;
+    background: rgb(241, 234, 234);
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -26,6 +26,16 @@
   display: flex;
   flex-direction: column;
 
+  &__header-window {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__message-error {
+    color: red;
+  }
+
   &__close-btn {
     margin-left: auto;
     transform: rotate(45deg) scale(2);
@@ -43,9 +53,21 @@
   display: flex;
   flex-direction: column;
 
+  &__time {
+    display: flex;
+  }
+
   &__field {
-    margin: 8px;
+    line-height: 16px;
     border: none;
+    margin-top: 10px;
+
+    &_invalid {
+      background-color: rgba(247, 179, 155, 0.555);
+      border: 2px solid rgb(245, 47, 47);
+      border-radius: 5px;
+      margin-top: 10px;
+    }
   }
 
   &__submit-btn {
@@ -53,9 +75,14 @@
     margin-left: auto;
     border: none;
     color: #fff;
-    background-color: cornflowerblue;
+    background-color: rgb(49, 158, 209);
     border: none;
     padding: 8px 16px;
     border-radius: 8px;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+    }
   }
 }

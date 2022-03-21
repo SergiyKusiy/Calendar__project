@@ -7,11 +7,19 @@
     display: flex;
     height: 100px;
     padding-left: 48px;
+    color: rgb(49, 158, 209);
+    background-color: rgb(217, 214, 245);
   }
 
   &__day {
     position: relative;
     flex: 1;
     border-left: 1px solid #eee;
+
+    &-label_today {
+      background-color: white;
+      border-radius: 50px;
+      border: 1px solid rgb(49, 158, 209);
+    }
   }
 }
