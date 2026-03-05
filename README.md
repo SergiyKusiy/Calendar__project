@@ -1,6 +1,6 @@
 # ___Calendar Project with React___
 ---
-[Site link](http://127.0.0.1:5500/src/index.html](http://localhost:8080)
+[Site link][(http://localhost:8080/)]
 ---
 
 ### Available Scripts
