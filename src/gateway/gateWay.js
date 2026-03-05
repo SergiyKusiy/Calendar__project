@@ -4,7 +4,7 @@ export const fetchEventInfo = () => {
   return fetch(baseUrl)
     .then(response => {
       if (!response.ok) {
-        throw new Error("Internal Server Error. Can't display events");
+        throw new Error("Server Error. Can't display events");
       }
       return response.json();
     })
@@ -20,7 +20,7 @@ export const createEvent = eventInfo => {
     body: JSON.stringify(eventInfo),
   }).then(response => {
     if (!response.ok) {
-      throw new Error("Internal Server Error. Can't display events");
+      throw new Error("Server Error. Can't display events");
     }
   });
 };
