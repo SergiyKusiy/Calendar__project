@@ -1,6 +1,6 @@
 # ___Calendar Project with React___
 ---
-[Site link][(https://project-calendar7.netlify.app/)]
+[Site link](https://project-calendar7.netlify.app/)
 ---
 
 ### Available Scripts
